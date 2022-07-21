@@ -15,44 +15,117 @@ h3{
 }
     
 p{
-    font-size: 12px;}
+    font-size: 12px;
+}
 
-.titulares{
-    font-size: 24px;}
+.main-header{
+    background-color: #EAC926; 
+    padding-bottom: 20px; 
+}
 
-.precios{
-    font-size: 18px;}
+div.topnav{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5%;
+}
 
-.descuentos{
-    font-size: 16px;}
-
-.descripciones{
-    font-size: 16px;}
-
-.icon{
-    display: inline;}
-
-.burger-menu{
-    text-align: center;}
-
-.iconos {
-    font-size: 20px;
-    color: #ffffff;
+#logo{
+    width: 50%;
     padding: 10px;
-    background-color: #03264C;
-    border-radius: 5px;
 }
 
-.center{
-    text-align: center;
+header div .search-box{
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    font-size: 11px;
+    width: 50%;
 }
+
+.lupa{
+    color: #000000;
+    border: 1px solid #666;
+    background-color: #ffffff;
+    font-size: 14px; 
+}
+
+.input_text{
+    width: 100%;
+}
+
+::placeholder {
+    text-align: center; 
+  }
+
+.main-header .copy-header{ /*selector descendente con class*/
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+    .titulares{
+        font-size: 24px;}
+
+    .precios{
+        font-size: 18px;}
+
+    .descuentos{
+        font-size: 16px;}
+
+    .descripciones{
+        font-size: 16px;}
+
+    .icon{
+        display: inline;}
+
+    .burger-menu{
+        text-align: center;}
+
+    .iconos {
+        font-size: 20px;
+        color: #ffffff;
+        padding: 10px;
+        background-color: #03264C;
+        border-radius: 5px;
+    }
+
+    .center{
+        text-align: center;
+    }
+
+    .iconosf{
+        height: 2em;
+        width: 2em;
+        margin-bottom: 10px;
+    }
 
 footer{
     background-color: white;
 }
 
-.iconosf{
-    height: 2em;
-    width: 2em;
-    margin-bottom: 10px;
-}
+/** 
+● Paleta de colores
+Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a;
+
+● Tipografías
+Familia: 'Roboto'
+
+● Tamaños Tipográficos
+Cuerpos de texto: 12px
+Titulares (Basado en tu última visita/Ofertas): 24px
+Precios: 18px
+Descuentos: 16px
+Descripciones: 16px
+
+● Íconos
+https://fontawesome.com/icons?d=gallery&m=free
+*/
+
