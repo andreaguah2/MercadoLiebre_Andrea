@@ -7,7 +7,7 @@
 body{
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
-    background-color: #EAC926;  
+    background-color: #ebebeb;
 }
 
 h3{
@@ -23,7 +23,7 @@ p{
     padding-bottom: 20px; 
 }
 
-div.topnav{
+div.top-header{
     display: flex;
     flex-wrap: wrap;
     padding: 5%;
@@ -66,23 +66,62 @@ header div .search-box{
     width: 100%;
 }
 
+
+header nav{
+    margin-left: 20px;
+}
+
+.main-navbar ul {     /*listas que estan en el main-navbar*/
+    list-style: none;
+    
+}
+
+.main-navbar a{
+    text-decoration: none;
+    color: #000000;
+    padding: 5px 0px;
+    font-size: 12px;
+}
+.burger-menu{
+    background-color: #1259c3;
+    color: #ffffff;
+    display: block;
+    max-width: 40px;
+    padding: 10px 0px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    margin: auto;
+}
+
+section.banner img{
+    width: 100%;
+}
+
+section div.last-visit, 
+section div.offers{
+    display: flex;
+    flex-wrap: wrap;
+} 
+
     .titulares{
         font-size: 24px;}
 
-    .precios{
-        font-size: 18px;}
+    .precio{
+        font-size: 18px;
+        width: 30%; 
+    }
 
-    .descuentos{
-        font-size: 16px;}
+    .descuento{
+        font-size: 16px;
+        width: 70%; 
+    }
 
-    .descripciones{
+    .descripcion{
         font-size: 16px;}
 
     .icon{
         display: inline;}
-
-    .burger-menu{
-        text-align: center;}
 
     .iconos {
         font-size: 20px;
@@ -120,10 +159,10 @@ Familia: 'Roboto'
 
 ● Tamaños Tipográficos
 Cuerpos de texto: 12px
-Titulares (Basado en tu última visita/Ofertas): 24px
-Precios: 18px
-Descuentos: 16px
-Descripciones: 16px
+Titulares (Basado en tu última visita/oferta): 24px
+precio: 18px
+descuento: 16px
+descripcion: 16px
 
 ● Íconos
 https://fontawesome.com/icons?d=gallery&m=free
