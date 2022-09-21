@@ -3,7 +3,7 @@ const app = express();
 const path = require('path');
 
 app.listen(3002, ()=> 
-    console.log('Al fin estoy funcionando')  
+    console.log('Al fin estoy funcionandon en el puerto 3002')  
 );
 
 const publicPath = path.resolve(__dirname, 'public');
