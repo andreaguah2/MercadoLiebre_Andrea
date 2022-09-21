@@ -57,7 +57,7 @@ header div .search-box{
     text-align: center; 
   }
 
-.main-header .copy-header{ /*selector descendente con class*/
+.main-header .copy-header{ 
     font-size: 14px;
     font-weight: 400;
     text-align: center;
@@ -66,14 +66,12 @@ header div .search-box{
     width: 100%;
 }
 
-
 header nav{
     margin-left: 20px;
 }
 
-.main-navbar ul {     /*listas que estan en el main-navbar*/
-    list-style: none;
-    
+.main-navbar ul {
+    list-style: none;  
 }
 
 .main-navbar a{
@@ -82,6 +80,7 @@ header nav{
     padding: 5px 0px;
     font-size: 12px;
 }
+
 .burger-menu{
     background-color: #1259c3;
     color: #ffffff;
@@ -97,6 +96,31 @@ header nav{
 section.banner img{
     width: 100%;
 }
+/* Productos en display */
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+
+main section article{
+    background-color: #fff;    
+    margin: 10px 0px;
+}
+
+main section h3{
+    margin: 20px 0px;
+}
+.descuento,
+.descripcion{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+h3,
+.descripcion{
+    color: #666;
+}
+
 
 section div.last-visit, 
 section div.offers{
@@ -145,8 +169,11 @@ footer{
     background-color: white;
 }
 
+
+
+
 /** 
-● Paleta de colores
+- Paleta de colores
 Amarillo: #EAC926;
 Azul: #03264C;
 Celeste: #1259c3;
@@ -154,17 +181,17 @@ Gris oscuro: #666;
 Gris claro: #ebebeb;
 Verde: #39b54a;
 
-● Tipografías
+- Tipografías
 Familia: 'Roboto'
 
-● Tamaños Tipográficos
+- Tamaños Tipográficos
 Cuerpos de texto: 12px
 Titulares (Basado en tu última visita/oferta): 24px
 precio: 18px
 descuento: 16px
 descripcion: 16px
 
-● Íconos
+- Íconos
 https://fontawesome.com/icons?d=gallery&m=free
 */
 
