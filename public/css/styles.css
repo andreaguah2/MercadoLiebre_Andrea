@@ -18,6 +18,11 @@ p{
     font-size: 12px;
 }
 
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+
 .main-header{
     background-color: #EAC926; 
     padding-bottom: 20px; 
@@ -25,21 +30,24 @@ p{
 
 div.top-header{
     display: flex;
-    flex-wrap: wrap;
     padding: 5%;
+    flex-direction: column;
+    align-items: center;
 }
 
+
+
 #logo{
-    width: 50%;
+    width: 40%;
     padding: 10px;
 }
 
 header div .search-box{
     display: flex;
     align-items: center;
-    padding: 2px;
+    padding: 10px;
     font-size: 11px;
-    width: 50%;
+    width: 80%;
 }
 
 .lupa{
@@ -70,15 +78,12 @@ header nav{
     margin-left: 20px;
 }
 
-.main-navbar ul {
-    list-style: none;  
+header nav .main-navbar .left-navbar{
+    justify-content: flex-start;
 }
 
-.main-navbar a{
-    text-decoration: none;
-    color: #000000;
-    padding: 5px 0px;
-    font-size: 12px;
+header nav .main-navbar .left-navbar{
+    justify-content: flex-end;
 }
 
 .burger-menu{
@@ -93,14 +98,14 @@ header nav{
     margin: auto;
 }
 
+.main article{
+    padding: 10px;
+}
+
 section.banner img{
     width: 100%;
 }
 /* Productos en display */
-main{
-    width: 90%;
-    margin: 0 auto;
-}
 
 main section article{
     background-color: #fff;    
@@ -121,16 +126,58 @@ h3,
     color: #666;
 }
 
+main section article img{
+    width: 100%;
+}
+
+
+article div.main-article{
+    width: 100%;
+    padding: 15px;
+    border-top: 1px solid #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    position: relative;
+}
+
+article div.main-article:hover{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+main section article i,
+.descuento{
+    color: #39b54a;
+}
+
+main section article i{
+    width: 30px;
+    height: 30px;
+    right: 20px;
+    top: -15px;
+    padding: 5px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    font-size: 16px;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+}
+
+main section div.producto article i{
+    transition: 1s;
+}
+
+main section div.producto article i:hover {
+    transform: rotate(-90deg);
+}
+
 
 section div.last-visit, 
 section div.offers{
     display: flex;
     flex-wrap: wrap;
 } 
-
-    .titulares{
-        font-size: 24px;}
-
     .precio{
         font-size: 18px;
         width: 30%; 
@@ -142,35 +189,187 @@ section div.offers{
     }
 
     .descripcion{
-        font-size: 16px;}
-
-    .icon{
-        display: inline;}
-
-    .iconos {
-        font-size: 20px;
-        color: #ffffff;
-        padding: 10px;
-        background-color: #03264C;
-        border-radius: 5px;
+        display: none;
+        margin-top: 20px;
     }
 
-    .center{
-        text-align: center;
+    .descuento,
+    .descripcion{
+    font-size: 16px;
+    font-weight: normal;
     }
 
-    .iconosf{
-        height: 2em;
-        width: 2em;
-        margin-bottom: 10px;
+    main section article:hover .descripcion{
+        display: block;
     }
+
+/* Footer */
 
 footer{
-    background-color: white;
+        text-align: center;
+        background-color: #ffffff;  
+}
+    
+footer .iconsf{
+        font-size: 2em; 
+        margin-top:20px;
+        margin-bottom: 10px;
+        color: #1259c3;     
 }
 
 
 
+/* LogIn - Register*/
+
+.login form,
+.register form .register-input_top, .register-input_center,.register-input_bottom{ 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+form input, button{         
+    margin: 17px 0;
+    border: none;
+    border-radius: 3px;
+}
+
+button.submit-login,         
+.buttons-register{
+   background-color: #6b9eeb;
+   color: #ebebeb;
+   font-weight: 300;
+}
+
+.register form button.buttons-register,
+.login form button,
+input[type='text'], 
+input[type='password'], 
+input[type='email'],
+input[type='date']{          
+    padding: 8px 0 ;
+}
+
+.login form button:hover,       
+.register form button:hover{
+    background-color: #0022AA;
+}
+
+/* Register */
+
+.register form button.buttons-register{ 
+    width: 100%;
+}
+
+@media (min-width: 361px){  
+/* Mobile */
+    main section div.producto{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    main section div.producto article{
+        width: 45%;
+    }
+
+    .main-navbar ul{
+        display: none;
+    }
+
+
+    .precio,
+    .descuento{
+        width: 50%;
+    }
+}
+
+@media (min-width: 769px){    
+/* Desktop */
+
+
+    .main-header{
+        padding: 20px;
+    }
+    .burger-menu{
+        display: none;
+    }
+    .main-navbar{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 0px;  
+        flex-direction: column;
+    }
+    .main-navbar ul{
+        display: flex;
+
+    }
+    .main-navbar li{
+        margin: 0 8px;
+    }
+
+    .main-navbar a{
+        display: inline-block;
+        padding: 5px 0px;
+        font-size: 17px;
+    }
+
+    .producto div.article{
+    display: flex;
+    }
+   
+    
+    footer div.data{
+        display: flex;
+        justify-content: space-around;
+
+    }
+    footer div.data .pago,.envios,.seguridad{
+        width: 30%;
+    }
+
+    footer div.copyright{
+        display: flex;
+        justify-content: left;
+        padding-top: 20px;
+    }
+
+    footer div.data div i:hover{
+        transition: all 1s;
+    }
+
+    footer div.data div i:hover{
+        color: #39b54a;
+    }
+
+    /*Nav longin.html*/
+
+    .login form{
+        align-items: center;
+     }
+ 
+     .login form input, .submit-login{
+         width: 50%;
+     }
+ 
+     /*Nav register.html*/
+ 
+     main.register{
+         position: relative;
+     }
+ 
+     .form_register{
+         position: relative;
+         left: 300px;
+     }
+     
+     .register form .register-input_top, .register-input_center,.register-input_bottom,.conteiner-buttons{
+         width: 40%;
+     }
+ 
+ }
 
 /** 
 - Paleta de colores

@@ -1,23 +1,21 @@
 const express = require("express");
 const app = express();
-const path = require('path');
+// const path = require('path');
 
-app.listen(3002, ()=> 
-    console.log('Al fin estoy funcionandon en el puerto 3002')  
-);
+app.use(express.static('public'));
 
-const publicPath = path.resolve(__dirname, 'public');
-    app.use(express.static(publicPath));
+app.set('puerto',process.env.PORT || 3002)
 
-app.get('/', function(req, res) {
-    let htmlPath = path.resolve(__dirname,'views/home.html');
-        res.sendFile(htmlPath);
+app.listen(app.get('puerto'), ()=>console.log(`Al fin estoy funcionando en el puerto${app.get('puerto')}`));
+
+app.get('/', (req,res)=>{
+    res.sendFile(__dirname + '/views/home.html');
 });
 
-app.get('/contacto', function(req, res){
-    res.send('Dejanos tu contacto!')
+app.get('/login', (req,res)=>{
+    res.sendFile(__dirname + '/views/login.html');
 });
 
-app.get('/producto', function(req, res){
-    res.send('Todo lo que necesitas!')
+app.get('/register', (req,res)=>{
+    res.sendFile(__dirname + '/views/register.html');
 });
