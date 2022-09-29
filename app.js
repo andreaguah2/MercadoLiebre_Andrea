@@ -6,7 +6,7 @@ app.use(express.static('public'));
 
 app.set('puerto',process.env.PORT || 3002)
 
-app.listen(app.get('puerto'), ()=>console.log(`Al fin estoy funcionando en el puerto${app.get('puerto')}`));
+app.listen(app.get('puerto'), ()=>console.log(`Al fin estoy funcionando en el puerto ${app.get('puerto')}`));
 
 app.get('/', (req,res)=>{
     res.sendFile(__dirname + '/views/home.html');

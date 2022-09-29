@@ -12,10 +12,15 @@ body{
 
 h3{
     font-size: 24px;
+    padding: 0;
 }
     
 p{
     font-size: 12px;
+}
+
+a{
+    text-decoration: none;
 }
 
 main{
@@ -28,6 +33,15 @@ main{
     padding-bottom: 20px; 
 }
 
+.logo-search{
+    width: 100%;
+}
+
+.main-header .img .search-box{
+    display: flex;
+    flex-direction: row;
+}
+
 div.top-header{
     display: flex;
     padding: 5%;
@@ -35,11 +49,14 @@ div.top-header{
     align-items: center;
 }
 
-
-
 #logo{
-    width: 40%;
+    width: 50%;
     padding: 10px;
+}
+
+.main-header .logo-search{
+    display: flex;
+    flex-direction: row;
 }
 
 header div .search-box{
@@ -63,7 +80,7 @@ header div .search-box{
 
 ::placeholder {
     text-align: center; 
-  }
+}
 
 .main-header .copy-header{ 
     font-size: 14px;
@@ -76,14 +93,6 @@ header div .search-box{
 
 header nav{
     margin-left: 20px;
-}
-
-header nav .main-navbar .left-navbar{
-    justify-content: flex-start;
-}
-
-header nav .main-navbar .left-navbar{
-    justify-content: flex-end;
 }
 
 .burger-menu{
@@ -105,31 +114,29 @@ header nav .main-navbar .left-navbar{
 section.banner img{
     width: 100%;
 }
+
 /* Productos en display */
 
 main section article{
-    background-color: #fff;    
-    margin: 10px 0px;
+    background-color: #fff; 
+    margin: 10px;   
 }
 
 main section h3{
     margin: 20px 0px;
 }
-.descuento,
-.descripcion{
+.descuento, .descripcion{
     font-size: 16px;
     font-weight: normal;
 }
 
-h3,
-.descripcion{
+h3, .descripcion{
     color: #666;
 }
 
 main section article img{
     width: 100%;
 }
-
 
 article div.main-article{
     width: 100%;
@@ -165,13 +172,12 @@ main section article i{
 }
 
 main section div.producto article i{
-    transition: 1s;
+    transition: 2s;
 }
 
 main section div.producto article i:hover {
     transform: rotate(-90deg);
 }
-
 
 section div.last-visit, 
 section div.offers{
@@ -209,15 +215,20 @@ footer{
         text-align: center;
         background-color: #ffffff;  
 }
-    
-footer .iconsf{
-        font-size: 2em; 
-        margin-top:20px;
-        margin-bottom: 10px;
-        color: #1259c3;     
+
+div.iconosf i{
+    color: #1259c3;
 }
 
+footer .benefits{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
 
+footer div.benefit {
+    margin: 10px;
+}
 
 /* LogIn - Register*/
 
@@ -279,54 +290,84 @@ input[type='date']{
         display: none;
     }
 
-
     .precio,
     .descuento{
         width: 50%;
     }
+    footer .benefits{
+
+        flex-direction: column;
+    }
 }
+
 
 @media (min-width: 769px){    
 /* Desktop */
 
-
-    .main-header{
-        padding: 20px;
+    #logo{
+        width: 50%;
     }
+
+    .logo-search{
+        width: 150%;
+    }
+
+    div.top-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
     .burger-menu{
         display: none;
     }
+
     .main-navbar{
         display: flex;
         justify-content: space-between;
-        margin-left: 0px;  
-        flex-direction: column;
     }
+
     .main-navbar ul{
         display: flex;
-
     }
+
     .main-navbar li{
         margin: 0 8px;
     }
 
+    .main-navbar{
+        flex-direction: row;
+    }
+    
     .main-navbar a{
         display: inline-block;
         padding: 5px 0px;
-        font-size: 17px;
+        font-size: 15px;
     }
 
-    .producto div.article{
-    display: flex;
+    header nav .main-navbar .left-navbar{
+        justify-content: flex-start;
     }
-   
     
+    header nav .main-navbar .left-navbar{
+        justify-content: flex-end;
+    }
+
+    .articles{
+    display: flex;
+    flex-direction: row;
+    }
+
+    main section article{ 
+        margin: 10px 10px;
+    }
+
     footer div.data{
         display: flex;
         justify-content: space-around;
-
     }
-    footer div.data .pago,.envios,.seguridad{
+
+     footer div.data .pago,.envios,.seguridad{
         width: 30%;
     }
 
@@ -342,6 +383,12 @@ input[type='date']{
 
     footer div.data div i:hover{
         color: #39b54a;
+    }
+
+    footer .benefits{
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
     }
 
     /*Nav longin.html*/
